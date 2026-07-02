@@ -15,7 +15,7 @@ def home():
     return "I'm currently alive!"
 
 def runme():
-  app.run(host='0.0.0.0',port=4869)
+  app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
 
 def keep_on():
     t = Thread(target=runme)
